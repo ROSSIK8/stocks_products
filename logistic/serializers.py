@@ -25,7 +25,6 @@ class StockSerializer(serializers.ModelSerializer):
                                                            stock=stock,
                                                            quantity=pos['quantity'],
                                                            price=pos['price'])
-            stock.positions.add(new_stock_product)
         return stock
 
     def update(self, instance, validated_data):
